@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background-color: #f8f9fa; 
+}
+
+footer {
+    color: white;
+    align-items: flex-end;
+}
+.card ul {
+    list-style: none;
+    padding-left: 0; 
+    color: white;
+}
+.col-8, .col-4 {
+    border: 2px solid black; 
+  }
+
+.thick{
+    border: 15px solid white;
+}
+.thin{
+    border: 5px solid white;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+
+
+.nav-link:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.accent {
+    color: #CCAD69; /* Gold color for headings or links */
+  }
+  /* Link styling */
+  .feature-link {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  .feature-link:hover {
+    color: #b89c5f; /* Slightly darker gold on hover */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;              /* Button width */
+    height: 40px;             /* Button height */
+    background-color: #000;   /* Dark background */
+    opacity: 0.7;            /* Slight transparency */
+    border-radius: 50%;       /* Make them round */
+    border: none;            /* Remove default border */
+    display: flex;           /* Center the icon */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    z-index: 10;
+  }
+
+  /* Increase opacity on hover for a nicer effect */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    opacity: 1;
+  }
+
+  /* Make the default white arrows invert to appear white on black */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);    /* Turns default white arrow to black if needed, or vice versa */
+    width: 20px;
+    height: 20px;
+  }
+
+  .aboutOnHome {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 70%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Styling the showroom heading */
+.showroom-heading {
+  width: 100%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px; /* Large text */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2d2d2d; /* Dark grey */
+  text-transform: uppercase;
+  padding: 20px 0;
+  background:#184733; /* Subtle gradient */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.services-container {
+  background-color: #f8f9fa; /* Light background */
+  padding: 30px 0;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.service-icon img {
+  width: 50px; 
+}
+
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #a1c255;
+  margin-top: 10px;
+}
+
+.service-link {
+  font-weight: bold;
+  font-size: 14px;
+  color: #d4a259; /* Gold color */
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
+.service-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.infoBox {
+  position: relative; /* Needed for absolute positioning */
+}
+
+.infoBox:not(:last-child)::after {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Ensure it's aligned */
+  right: -1px; /* Position on the right edge */
+  height: 110px; /* Adjust height */
+  width: 1px; /* Thin line */
+  background-color: #a19c9c; /* Your chosen color */
+}
+
+.services-header {
+  text-align: center;
+  font-family: 'Dancing Script', cursive; /* Stylish font */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c2c2c; /* Elegant dark color */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.services-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #d4a373; /* Gold or accent color */
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+.page-header {
+  text-align: center;
+  margin: 20px auto;
+  width: 250px; /* Adjust as needed */
+  padding: 15px 0;
+  border-radius: 50px; /* Creates the cylinder effect */
+  background: linear-gradient(to right, #5a5a5a, #ffffff 50%, #5a5a5a); /* Shiny effect */
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6), /* Inner shine */
+              0 5px 10px rgba(0, 0, 0, 0.3); /* Outer shadow */
+}
+
+.page-header h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  font-style: italic;
+  color: #ffffff; /* White text for contrast */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.product-description {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+}
+
+.aboutHeader{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px #a1c255;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;  
+}
+
+.stylish{
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic; 
+  font-size: medium;
+  font-size: large;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 2.2rem;
+  color: gold;
+}
+
+h1, h2 {
+  color: #184733;
+  text-align: center;
+}
+.section {
+  margin-bottom: 30px;
+}
+.highlight {
+  font-weight: bolder;
+  color: #a1c255;
+}
+ul {
+  list-style:circle;
+  padding: 0;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.image-container img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.container {
+  width: 65%;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.split-container {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  position: relative;
+  display: flex;
+  border: none;
+  padding: 0;
+}
+.left-side, .right-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  border: none;
+  height: 100%;
+}
+/* Left side: Blue background with a diagonal cut on the right edge */
+.left-side {
+  background-color: #007bff;
+  /* Creates a diagonal edge: the bottom-right corner is "cut" inward */
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+/* Right side: Red background with a diagonal cut on the left edge */
+.right-side {
+  background-color: #dc3545;
+  /* The left edge is slanted to match the diagonal from the left side */
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+body > footer{
+  margin:0px;
+  padding:0px;
+  min-width:100%;
+  max-width:100%;
+  background:#ffffff;
+  height:auto;
+}
+
+/*removals*/
+
+.form-heading {
+  color: #184733;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-section-heading {
+  color: #a1c255;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;  
+  font-weight: bold;
+}
+/* Form Element Styles */
+.form-label {
+  display: block;
+  margin-top: 10px;
+}
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.form-textarea {
+  resize: vertical;
+}
+/* Checkbox Styles */
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: normal;
+}
+.form-checkbox input {
+  margin-right: 8px;
+}
+/* Privacy Text */
+.form-privacy {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+/* Button Styles */
+.form-button {
+  background-color: #184733;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+.form-button:hover {
+  background-color: #184733;
+}
+
+.piano-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sort {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  background: #1a1a1a;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination-arrow {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pagination-arrow:hover {
+  background-color: #bbb;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 0 20%;
+}
+
+.info-text h2 {
+  font-style: italic;
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+
+.contact-btn {
+  background-color: #c9a059;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #b38a4e;
+}
+
+.info-description {
+  width: 60%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.info-description a {
+  color: #1a1a1a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.info-description a:hover {
+  text-decoration: underline;
+}
+#shopping-by {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.shopping-by strong {
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: 1px solid white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #a1c255;
+  display: inline-block;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.filter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  cursor: pointer;
+}
+
+#currentSelection{
+  display: flex;
+  flex-direction: column;
+}
+
+.filters ul li:hover {
+  cursor: pointer;
+  /* Optionally add a subtle background change for visual feedback */
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active {
+  font-weight: bolder;
+}
