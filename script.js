@@ -310,14 +310,18 @@ grandLink.addEventListener("click", function(e) {
   console.log("grandLink clicked");
   // Redirect to the pianos page
   window.location.href = "pianos.html";
-  setTimeout(() => {
-    pianoType.select = true;
-    pianoType.type = "Grand Piano";
-    pianoFilter();
-    document.getElementById("pianoType").style.display = "flex";
-    document.getElementById("pianoType").style.justifyContent = "space-between";
-    document.getElementById("currentType").textContent = "Grand Piano";
-    updateShoppingByVisibility();
-    clearPrices();
-  }),100
+});
+
+const uprightLink = document.getElementById("uprightPianosLink");
+grandLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  // Redirect to the pianos page
+  window.location.href = "pianos.html";
+});
+
+const digitalLink = document.getElementById("digitalPianosLink");
+grandLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  // Redirect to the pianos page
+  window.location.href = "pianos.html";
 });

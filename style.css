@@ -561,3 +561,8 @@ body {
 .active {
   font-weight: bolder;
 }
+
+.pianoLink{
+  text-decoration: none;
+  color: gold;
+}
